@@ -11,4 +11,5 @@ function oddEven(inputNum) {
     }
 }
 
+//Calling the function
 oddEven(inputNumber);
