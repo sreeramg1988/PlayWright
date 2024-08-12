@@ -10,9 +10,9 @@ test(`Login to SalesForce application`, async() => {
     //navigate to salesforce 
     await page.goto("https://login.salesforce.com/", {timeout : 3000});
     //enter username
-    await page.locator("#username").fill('emailAddress');
+    await page.locator("#username").fill('sgkautomation+test1@gmail.com');
     //enter password
-    await page.locator("#password").fill('Password');
+    await page.locator("#password").fill('Pass@123');
     //click on Login button
     await page.locator("#Login").click();
 
