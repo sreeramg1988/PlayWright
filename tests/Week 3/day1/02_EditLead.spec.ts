@@ -1,11 +1,9 @@
 import { expect, test } from "@playwright/test";
 
-
+//Define re-usable constants
 const pageUrl = 'http://leaftaps.com/opentaps/control/main';
 const userName = 'DemoSalesManager';
 const password = 'crmsfa';
-
-
 
 test('Edit a lead', async({page}) => {
     page.setDefaultTimeout(3000);
@@ -44,7 +42,8 @@ test('Edit a lead', async({page}) => {
 
     //Click on Edit
     await page.getByRole('link', {name : 'Edit'}).click();
-
+    
+    //Declare the test data
     let updatedCompanyName = 'TCS';
     let updatedRevenue = '720000';
     let updatedDepartment = 'Telecom';
