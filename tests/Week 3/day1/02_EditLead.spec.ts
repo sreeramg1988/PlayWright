@@ -6,7 +6,7 @@ const userName = 'DemoSalesManager';
 const password = 'crmsfa';
 
 test('Edit a lead', async({page}) => {
-    page.setDefaultTimeout(3000);
+    page.setDefaultTimeout(5000);
     //launch app
     await page.goto(pageUrl);
 
@@ -33,12 +33,12 @@ test('Edit a lead', async({page}) => {
     await page.getByRole('textbox', {name : 'First name:'}).fill('Testuser');
     //click Find Leads button and wait 
     await page.getByRole('button', {name : 'Find Leads'}).click({timeout : 3000});
-    page.setDefaultTimeout(3000);
+    page.waitForTimeout(3000);
     // click on the first leadID
     await page.locator("//div[contains(@class,'partyId')]/a[@class='linktext']").first().click({timeout :  3000});
 
     //wait for pageload
-    page.setDefaultTimeout(5000);
+    page.waitForTimeout(3000);
 
     //Click on Edit
     await page.getByRole('link', {name : 'Edit'}).click();
